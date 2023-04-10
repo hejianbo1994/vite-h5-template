@@ -1,24 +1,46 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import "vant/lib/index.css";
 
-import App from './App.vue'
-import router from './router'
+import {
+  Button,
+  NavBar,
+  Search,
+  TextEllipsis,
+  BackTop,
+  Col,
+  Row,
+  Space,
+  Toast,
+} from "vant";
 
-import svgIcon from '@/components/SvgIcon/index.vue'
+import App from "./App.vue";
+import router from "./router";
 
-import 'amfe-flexible/index.js'
-import './assets/styles/index.scss'
+import svgIcon from "@/components/SvgIcon/index.vue";
 
-import './permission'
-import directive from './directive'
+import "amfe-flexible/index.js";
+import "./assets/styles/index.scss";
 
-const app = createApp(App)
+import "./permission";
+import directive from "./directive";
 
-app.use(createPinia())
-app.use(router)
+const app = createApp(App);
+
+app.use(createPinia());
+app.use(router);
+// app.use(NavBar);
+app.use(Button);
+app.use(Search);
+app.use(TextEllipsis);
+app.use(BackTop);
+app.use(Col);
+app.use(Row);
+app.use(Space);
+app.use(Toast);
 
 directive(app);
 
-app.component('svg-icon', svgIcon)
+app.component("svg-icon", svgIcon);
 
-app.mount('#app')
+app.mount("#app");

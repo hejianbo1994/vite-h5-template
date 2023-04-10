@@ -9,18 +9,20 @@ body {
 }
 
 .app-container {
-
   background-color: $app-background-color;
 
-  .app-header {}
+  .app-header {
+  }
 
   .app-body {
-    height: calc(100vh - var(--van-nav-bar-height) - var(--van-tabbar-height));
+    // height: calc(100vh - var(--van-nav-bar-height));
+    // height: calc(100vh - var(--van-nav-bar-height) - var(--van-tabbar-height));
+    min-height: 100vh;
     overflow: auto;
   }
 
   .app-body-noNavBar {
-    height: calc(100vh  - var(--van-tabbar-height));
+    height: calc(100vh - var(--van-tabbar-height));
     overflow: auto;
   }
 
@@ -34,6 +36,6 @@ body {
     overflow: auto;
   }
 
-  .app-footer {}
-
+  .app-footer {
+  }
 }

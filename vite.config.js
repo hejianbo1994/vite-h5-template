@@ -25,5 +25,6 @@ export default defineConfig(({ mode, command }) => {
         },
       },
     },
+    base: "/www/wwwroot/spacezhu-utils/spacezhu-utils/",
   };
 });

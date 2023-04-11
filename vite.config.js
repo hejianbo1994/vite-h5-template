@@ -18,10 +18,10 @@ export default defineConfig(({ mode, command }) => {
     server: {
       cors: true,
       proxy: {
-        "/api": {
+        "/nest-api": {
           target: "http://127.0.0.1:3002",
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, ""),
+          rewrite: (path) => path.replace(/^\/nest-api/, ""),
         },
       },
     },
